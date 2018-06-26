@@ -1,7 +1,7 @@
 # code-dbsb
 
 #### 项目介绍
-dubbo + Spring Boot
+Spring Boot + dubbo
 
 #### 软件架构
 软件架构说明
