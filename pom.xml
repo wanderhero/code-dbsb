@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
 
     <name>code-dbsb</name>
-    <description>code-dbsb for Spring Boot</description>
+    <description>dubbo + Spring Boot</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
