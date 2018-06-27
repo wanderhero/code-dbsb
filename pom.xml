@@ -7,7 +7,7 @@
     <groupId>com.wander</groupId>
     <artifactId>code-dbsb</artifactId>
     <!--项目当前版本，格式为:主版本.次版本.增量版本-限定版本号 -->
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${code-dbsb.version}</version>
     <packaging>pom</packaging>
 
     <name>code-dbsb</name>
@@ -21,10 +21,11 @@
     </parent>
 
     <modules>
-
+        <module>code-dbsb-demo</module>
     </modules>
 
     <properties>
+        <code-dbsb.version>0.0.1-SNAPSHOT</code-dbsb.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
