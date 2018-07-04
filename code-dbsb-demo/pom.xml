@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.wander</groupId>
         <artifactId>code-dbsb</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${code-dbsb.version}</version>
     </parent>
 
     <artifactId>code-dbsb-demo</artifactId>
