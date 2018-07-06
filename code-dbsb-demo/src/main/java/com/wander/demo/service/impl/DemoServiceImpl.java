@@ -3,9 +3,8 @@ package com.wander.demo.service.impl;
 import com.wander.demo.dao.DemoDao;
 import com.wander.demo.entity.Demo;
 import com.wander.demo.service.DemoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
 
 /**
  * @author Wander.Zeng
@@ -15,8 +14,12 @@ import javax.annotation.Resource;
 @Service
 public class DemoServiceImpl implements DemoService {
 
-    @Resource
-    private DemoDao demoDao;
+    private final DemoDao demoDao;
+
+    @Autowired
+    public DemoServiceImpl(DemoDao demoDao) {
+        this.demoDao = demoDao;
+    }
 
     @Override
     public String test() {
