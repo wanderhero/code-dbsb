@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wander.demo.dao.DemoDao">
+
+    <!--auto generated Code-->
+    <resultMap id="DemoResultMap" type="com.wander.demo.entity.Demo">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+    </resultMap>
+
+    <select id="test" resultType="com.wander.demo.entity.Demo">
+        SELECT
+            *
+        FROM
+            tbl_demo
+        WHERE
+            id = #{id}
+    </select>
+
+    <!--auto generated Code-->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO demo (
+            id,
+            name
+        ) VALUES (
+            #{id},
+            #{name}
+        )
+    </insert>
+
+    <insert id="insertSelective" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO demo
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">id,</if>
+            <if test="name != null">name,</if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">#{id},</if>
+            <if test="name != null">#{name},</if>
+        </trim>
+    </insert>
+
+    <!--auto generated Code-->
+    <insert id="insertList">
+        INSERT INTO demo
+        (id, name)
+        VALUES
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            #{item.id},
+            #{item.name}
+            )
+        </foreach>
+    </insert>
+
+    <!--auto generated Code-->
+    <update id="update">
+        UPDATE demo
+        <set>
+            <if test="id != null">id = #{id},</if>
+            <if test="name != null">name = #{name}</if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+</mapper>
+
