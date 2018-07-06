@@ -3,12 +3,12 @@
 <mapper namespace="com.wander.demo.dao.DemoDao">
 
     <!--auto generated Code-->
-    <resultMap id="DemoResultMap" type="com.wander.demo.entity.Demo">
+    <resultMap id="demoResultMap" type="com.wander.demo.entity.Demo">
         <result column="id" property="id"/>
         <result column="name" property="name"/>
     </resultMap>
 
-    <select id="test" resultType="com.wander.demo.entity.Demo">
+    <select id="test" resultMap="demoResultMap">
         SELECT
             *
         FROM
