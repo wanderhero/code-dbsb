@@ -19,8 +19,8 @@ public class DemoController {
 
     @RequestMapping("/test")
     public String test() {
-        demoService.test();
-        return "hello";
+        String test = demoService.test();
+        return "hello : " + test;
     }
 
 }

@@ -19,9 +19,12 @@ public class DemoServiceImpl implements DemoService {
     private DemoDao demoDao;
 
     @Override
-    public void test() {
-        Demo demoEntity = demoDao.test("1");
-        System.out.println("test:" + demoEntity.getId());
+    public String test() {
+        Demo demo = demoDao.test("1");
+        if (null != demo) {
+            return demo.getName();
+        }
+        return "null";
     }
 
 }

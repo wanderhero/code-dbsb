@@ -9,7 +9,9 @@ public interface DemoService {
 
     /**
      * 测试
+     *
+     * @return
      */
-    void test();
+    String test();
 
 }
