@@ -1,9 +1,10 @@
 package com.wander.demo.controller;
 
 import com.wander.demo.service.DemoService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 /**
  * @author Wander.Zeng
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/demo")
 public class DemoController {
 
-    @Autowired
+    @Resource
     private DemoService demoService;
 
     @RequestMapping("/test")
