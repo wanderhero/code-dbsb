@@ -10,7 +10,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @desc CodeDbsbDemoApplication
  */
 @SpringBootApplication
-@MapperScan("com.wander.demo.dao")
 public class CodeDbsbDemoApplication {
 
     public static void main(String[] args) {
