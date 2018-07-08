@@ -25,6 +25,7 @@ public class DemoServiceImpl implements DemoService {
     public String test() {
         Demo demo = demoDao.test("1");
         if (null != demo) {
+            demoDao.update(demo);
             return demo.getName();
         }
         return "null";

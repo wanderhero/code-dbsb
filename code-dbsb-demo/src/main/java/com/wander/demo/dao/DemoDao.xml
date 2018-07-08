@@ -20,7 +20,7 @@
 
     <!--auto generated Code-->
     <insert id="insert" useGeneratedKeys="true" keyProperty="id">
-        INSERT INTO demo (
+        INSERT INTO tbl_demo (
             id,
             name
         ) VALUES (
@@ -30,7 +30,7 @@
     </insert>
 
     <insert id="insertSelective" useGeneratedKeys="true" keyProperty="id">
-        INSERT INTO demo
+        INSERT INTO tbl_demo
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="id != null">id,</if>
             <if test="name != null">name,</if>
@@ -44,7 +44,7 @@
 
     <!--auto generated Code-->
     <insert id="insertList">
-        INSERT INTO demo
+        INSERT INTO tbl_demo
         (id, name)
         VALUES
         <foreach collection="list" item="item" index="index" separator=",">
@@ -57,7 +57,7 @@
 
     <!--auto generated Code-->
     <update id="update">
-        UPDATE demo
+        UPDATE tbl_demo
         <set>
             <if test="id != null">id = #{id},</if>
             <if test="name != null">name = #{name}</if>
