@@ -6,6 +6,7 @@
     <resultMap id="demoResultMap" type="com.wander.demo.entity.Demo">
         <result column="id" property="id"/>
         <result column="name" property="name"/>
+        <result column="create_user_id" property="createUserId"/>
     </resultMap>
 
     <select id="test" resultMap="demoResultMap">

@@ -9,6 +9,7 @@ public class Demo {
 
     private Long id;
     private String name;
+    private Long createUserId;
 
     public Long getId() {
         return id;
@@ -24,6 +25,14 @@ public class Demo {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Long getCreateUserId() {
+        return createUserId;
+    }
+
+    public void setCreateUserId(Long createUserId) {
+        this.createUserId = createUserId;
     }
 
 }
