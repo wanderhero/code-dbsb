@@ -1,5 +1,7 @@
 package com.wander.demo.entity;
 
+import java.util.Date;
+
 /**
  * @author Wander.Zeng
  * @create 2018-07-04 18:03
@@ -10,6 +12,7 @@ public class Demo {
     private Long id;
     private String name;
     private Long createUserId;
+    private Date createTime;
 
     public Long getId() {
         return id;
@@ -35,4 +38,12 @@ public class Demo {
         this.createUserId = createUserId;
     }
 
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+    
 }
