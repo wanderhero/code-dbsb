@@ -1,8 +1,10 @@
 package com.wander.demo.controller;
 
 import com.wander.demo.service.DemoService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,6 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/demo")
 public class DemoController {
 
+    private static final Logger logger = LoggerFactory.getLogger(DemoController.class);
+
     private final DemoService demoService;
 
     @Autowired
@@ -22,9 +26,10 @@ public class DemoController {
         this.demoService = demoService;
     }
 
-    @PostMapping("/test")
+    @GetMapping("/test")
     public String test() {
         String test = demoService.test();
+        logger.error("test");
         return "hello : " + test;
     }
 
