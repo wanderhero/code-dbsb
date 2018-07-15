@@ -2,6 +2,7 @@ package com.wander.demo.controller;
 
 import com.wander.demo.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,7 +22,7 @@ public class DemoController {
         this.demoService = demoService;
     }
 
-    @RequestMapping("/test")
+    @PostMapping("/test")
     public String test() {
         String test = demoService.test();
         return "hello : " + test;
