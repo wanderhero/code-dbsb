@@ -7,6 +7,8 @@
         <result column="id" property="id"/>
         <result column="name" property="name"/>
         <result column="create_user_id" property="createUserId"/>
+        <result column="create_user_name" property="createUserName"/>
+        <result column="create_time" property="createTime"/>
     </resultMap>
 
     <select id="test" resultMap="demoResultMap">
@@ -66,4 +68,3 @@
     </update>
 
 </mapper>
-

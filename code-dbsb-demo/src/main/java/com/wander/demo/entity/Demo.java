@@ -12,6 +12,7 @@ public class Demo {
     private Long id;
     private String name;
     private Long createUserId;
+    private String createUserName;
     private Date createTime;
 
     public Long getId() {
@@ -38,6 +39,14 @@ public class Demo {
         this.createUserId = createUserId;
     }
 
+    public String getCreateUserName() {
+        return createUserName;
+    }
+
+    public void setCreateUserName(String createUserName) {
+        this.createUserName = createUserName;
+    }
+
     public Date getCreateTime() {
         return createTime;
     }
@@ -45,5 +54,5 @@ public class Demo {
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
-    
+
 }
