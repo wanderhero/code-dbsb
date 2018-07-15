@@ -29,7 +29,7 @@ public class DemoController {
     @GetMapping("/test")
     public String test() {
         String test = demoService.test();
-        logger.error("test3");
+        logger.error("test");
         return "hello : " + test;
     }
 
