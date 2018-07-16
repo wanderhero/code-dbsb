@@ -4,6 +4,7 @@ import com.wander.demo.service.DemoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,6 +22,11 @@ public class DemoController {
 
     private final DemoService demoService;
 
+    @Value("${name}")
+    private String name;
+    @Value("${info}")
+    private String info;
+
     @Autowired
     public DemoController(DemoService demoService) {
         this.demoService = demoService;
@@ -29,8 +35,8 @@ public class DemoController {
     @GetMapping("/test")
     public String test() {
         String test = demoService.test();
-        logger.error("wander");
-        return "hello : " + test;
+        logger.error(name);
+        return info + " : " + test;
     }
 
 }
