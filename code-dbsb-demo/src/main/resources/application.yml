@@ -20,4 +20,3 @@ spring:
 mybatis:
   #指定生成的*.xml文件路径
   mapper-locations: classpath*:com/wander/**/dao/*.xml
-  #type-aliases-package：指定实体类路径
