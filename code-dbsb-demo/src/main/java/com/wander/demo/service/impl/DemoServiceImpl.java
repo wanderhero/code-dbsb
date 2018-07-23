@@ -5,6 +5,7 @@ import com.wander.demo.entity.Demo;
 import com.wander.demo.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @author Wander.Zeng
@@ -21,6 +22,7 @@ public class DemoServiceImpl implements DemoService {
         this.demoDao = demoDao;
     }
 
+    @Transactional(rollbackFor = Exception.class)
     @Override
     public String test() {
         // test(1)

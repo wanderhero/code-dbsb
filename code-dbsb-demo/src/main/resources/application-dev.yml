@@ -9,6 +9,8 @@ spring:
     username: root
     #数据库密码
     password: 123456
+    #如果不使用默认的数据源 （com.zaxxer.hikari.HikariDataSource）
+    type: com.alibaba.druid.pool.DruidDataSource
 
 ###################  自定义  ###################
 name: wander

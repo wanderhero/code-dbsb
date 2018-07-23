@@ -62,7 +62,8 @@
         UPDATE tbl_demo
         <set>
             <if test="id != null">id = #{id},</if>
-            <if test="name != null">name = #{name}</if>
+            <if test="name != null">name = #{name},</if>
+            update_time = now()
         </set>
         WHERE id = #{id}
     </update>
