@@ -23,7 +23,8 @@ public class DemoServiceImpl implements DemoService {
 
     @Override
     public String test() {
-        Demo demo = demoDao.test("1");
+        // test(1)
+        Demo demo = demoDao.test2(1L);
         if (null != demo) {
             demoDao.update(demo);
             return demo.getName();

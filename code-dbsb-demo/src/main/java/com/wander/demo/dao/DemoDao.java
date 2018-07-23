@@ -3,6 +3,7 @@ package com.wander.demo.dao;
 import com.wander.demo.entity.Demo;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -16,13 +17,24 @@ public interface DemoDao {
 
     /**
      * 测试
+     *
      * @param id
      * @return
      */
-    Demo test(@Param("id") String id);
+    Demo test(@Param("id") Long id);
+
+    /**
+     * 测试 @Select
+     *
+     * @param id
+     * @return
+     */
+    @Select("select * from tbl_demo where id = #{id}")
+    Demo test2(@Param("id") Long id);
 
     /**
      * 插入
+     *
      * @param demo
      * @return
      */
@@ -30,6 +42,7 @@ public interface DemoDao {
 
     /**
      * 选择性插入
+     *
      * @param demo
      * @return
      */
@@ -37,6 +50,7 @@ public interface DemoDao {
 
     /**
      * 批量插入
+     *
      * @param demos
      * @return
      */
@@ -44,6 +58,7 @@ public interface DemoDao {
 
     /**
      * 更新
+     *
      * @param demo
      * @return
      */
